@@ -11,12 +11,12 @@ public class Rotate : MonoBehaviour
     {
         if (shouldRotate)
         {
-            transform.Rotate(Vector3.up * 100f * Time.deltaTime); // Rotate on Y-axis
+            transform.Rotate(Vector3.up * 100f * Time.deltaTime); // Rotate on Y-axis( vector.up)
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        shouldRotate = true;
+        shouldRotate = true; // start rotaing
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnSphere : MonoBehaviour
 {
-    public GameObject sphere;  // Reference to the sphere above the object
+    public GameObject sphere;  // Reference to the ball above obstacle wall
 
     void OnCollisionEnter(Collision collision)
     {
@@ -14,15 +14,6 @@ public class SpawnSphere : MonoBehaviour
             // Make the sphere visible
             sphere.SetActive(true);
 
-            // Add a Rigidbody component to the sphere if it doesn't already have one
-            Rigidbody rb = sphere.GetComponent<Rigidbody>();
-            if (rb == null)
-            {
-                rb = sphere.AddComponent<Rigidbody>();
-            }
-
-            // Ensure gravity is enabled
-            rb.useGravity = true;
         }
     }
 }
